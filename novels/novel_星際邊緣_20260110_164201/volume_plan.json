@@ -1,0 +1,26 @@
+{
+  "title": "星際邊緣",
+  "genre": "科幻",
+  "theme": "人類文明的存續與重建",
+  "total_chapters": 30,
+  "total_volumes": 2,
+  "chapters_per_volume": 15,
+  "volumes": [
+    {
+      "volume_num": 1,
+      "title": "星際邊緣 - 第一卷：起",
+      "theme": "人類文明的存續與重建 - 成長與挑戰",
+      "start_chapter": 1,
+      "end_chapter": 15,
+      "chapter_count": 15
+    },
+    {
+      "volume_num": 2,
+      "title": "星際邊緣 - 第2卷：終",
+      "theme": "人類文明的存續與重建 - 高潮與結局",
+      "start_chapter": 16,
+      "end_chapter": 30,
+      "chapter_count": 15
+    }
+  ]
+}

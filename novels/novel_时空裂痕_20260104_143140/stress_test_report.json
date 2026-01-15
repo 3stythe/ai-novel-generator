@@ -1,0 +1,115 @@
+{
+  "start_time": "2026-01-04 14:31:40.234292",
+  "end_time": "2026-01-04 14:37:25.769239",
+  "total_duration": 345.534947,
+  "chapters": [
+    {
+      "number": 1,
+      "word_count": 3704,
+      "cost": 0.0022161999999999998,
+      "duration": 69.61991024017334,
+      "success": true
+    },
+    {
+      "number": 2,
+      "word_count": 3514,
+      "cost": 0.0025535999999999996,
+      "duration": 22.641872882843018,
+      "success": true
+    },
+    {
+      "number": 3,
+      "word_count": 4322,
+      "cost": 0.0027307,
+      "duration": 24.572503566741943,
+      "success": true
+    },
+    {
+      "number": 4,
+      "word_count": 2207,
+      "cost": 0.0019481000000000001,
+      "duration": 19.391666650772095,
+      "success": true
+    },
+    {
+      "number": 5,
+      "word_count": 3725,
+      "cost": 0.0026215,
+      "duration": 26.171111822128296,
+      "success": true
+    },
+    {
+      "number": 6,
+      "word_count": 2330,
+      "cost": 0.0021168000000000003,
+      "duration": 18.521009922027588,
+      "success": true
+    },
+    {
+      "number": 7,
+      "word_count": 3714,
+      "cost": 0.0026649,
+      "duration": 41.844703674316406,
+      "success": true
+    },
+    {
+      "number": 8,
+      "word_count": 2209,
+      "cost": 0.0020908999999999997,
+      "duration": 47.945226192474365,
+      "success": true
+    },
+    {
+      "number": 9,
+      "word_count": 3770,
+      "cost": 0.0027342,
+      "duration": 24.548667430877686,
+      "success": true
+    },
+    {
+      "number": 10,
+      "word_count": 2163,
+      "cost": 0.0021217000000000002,
+      "duration": 42.21785855293274,
+      "success": true
+    }
+  ],
+  "errors": [],
+  "retries": [],
+  "performance": {
+    "total_chapters": 10,
+    "successful_chapters": 10,
+    "failed_chapters": 0,
+    "success_rate": 100.0,
+    "time": {
+      "total_duration": 345.534947,
+      "outline_duration": 8.011487483978271,
+      "chapters_duration": 337.4745309352875,
+      "avg_per_chapter": 33.74745309352875,
+      "min_per_chapter": 18.521009922027588,
+      "max_per_chapter": 69.61991024017334
+    },
+    "cost": {
+      "total": 0.0237986,
+      "avg_per_chapter": 0.00237986,
+      "per_1000_words": 0.0007517404763408933
+    },
+    "words": {
+      "total": 31658,
+      "avg_per_chapter": 3165.8,
+      "min_per_chapter": 2163,
+      "max_per_chapter": 4322
+    },
+    "tokens": {
+      "total": 34821,
+      "input": 16029,
+      "output": 18792,
+      "ratio": 0.8529693486590039
+    }
+  },
+  "cost_analysis": {},
+  "coherence_scores": [],
+  "project_dir": "E:\\神奇的東東\\AI 小說生成器\\novel_时空裂痕_20260104_143140",
+  "outline_duration": 8.011487483978271,
+  "outline_length": 916
+}

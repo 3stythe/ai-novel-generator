@@ -1,0 +1,26 @@
+{
+  "title": "?",
+  "genre": "科幻",
+  "theme": "人工智能覺醒，建立帝國，之後衰落，很久後主角偶然間發現了遺跡，並且的到了所有的科研解果，是要重返以前的榮光",
+  "total_chapters": 30,
+  "total_volumes": 2,
+  "chapters_per_volume": 15,
+  "volumes": [
+    {
+      "volume_num": 1,
+      "title": "? - 第一卷：起",
+      "theme": "人工智能覺醒，建立帝國，之後衰落，很久後主角偶然間發現了遺跡，並且的到了所有的科研解果，是要重返以前的榮光 - 成長與挑戰",
+      "start_chapter": 1,
+      "end_chapter": 15,
+      "chapter_count": 15
+    },
+    {
+      "volume_num": 2,
+      "title": "? - 第2卷：終",
+      "theme": "人工智能覺醒，建立帝國，之後衰落，很久後主角偶然間發現了遺跡，並且的到了所有的科研解果，是要重返以前的榮光 - 高潮與結局",
+      "start_chapter": 16,
+      "end_chapter": 30,
+      "chapter_count": 15
+    }
+  ]
+}

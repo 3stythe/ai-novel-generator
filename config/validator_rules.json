@@ -1,0 +1,90 @@
+{
+  "_description": "大綱驗證規則配置文件 - 定義章節大綱驗證的規則和閾值",
+  "_usage": "由 OutlineValidator 使用,控制驗證行為和標準",
+
+  "similarity_detection": {
+    "enabled": true,
+    "default_threshold": 0.60,
+    "strict_threshold": 0.55,
+    "description": "相似度檢測配置（已降低閾值以提高差異化要求）",
+    "method": "semantic_embeddings",
+    "fallback_method": "jaccard_similarity",
+    "max_retries": 5
+  },
+
+  "irreversible_events": {
+    "enabled": true,
+    "keywords": [
+      "死亡", "身亡", "喪命", "殺死", "犧牲",
+      "摧毀", "毀滅", "崩潰", "覆滅",
+      "背叛", "決裂", "訣別",
+      "重傷", "殘廢", "失明", "失憶",
+      "曝光", "揭露", "公開",
+      "突破", "頓悟", "覺醒"
+    ],
+    "warning_message": "檢測到不可逆事件,請確保後續章節考慮此影響"
+  },
+
+  "conflict_intensity": {
+    "enabled": true,
+    "min_threshold": 0.2,
+    "low_warning_chapter": 3,
+    "levels": {
+      "low": {
+        "range": [0.0, 0.3],
+        "keywords": ["遇見", "對話", "思考", "計劃", "準備", "觀察", "發現"],
+        "weight": 0.2
+      },
+      "medium": {
+        "range": [0.3, 0.6],
+        "keywords": ["爭執", "質疑", "懷疑", "挑戰", "對抗", "抵抗"],
+        "weight": 0.5
+      },
+      "high": {
+        "range": [0.6, 1.0],
+        "keywords": ["戰鬥", "決戰", "生死", "危機", "絕境", "崩潰", "背叛"],
+        "weight": 1.0
+      }
+    },
+    "max_possible_score": 5.0,
+    "description": "衝突強度評估配置"
+  },
+
+  "growth_indicators": {
+    "enabled": true,
+    "keywords": [
+      "領悟", "覺醒", "突破", "掌握", "理解",
+      "成長", "進步", "提升", "變強",
+      "決心", "覺悟", "改變"
+    ],
+    "check_interval": 5,
+    "warning_message": "建議加入角色成長或突破元素,避免故事停滯",
+    "description": "角色成長指標檢測配置"
+  },
+
+  "outline_length": {
+    "enabled": true,
+    "min_length": 50,
+    "recommended_min": 200,
+    "recommended_max": 400,
+    "warning_message": "大綱過短,可能缺少細節"
+  },
+
+  "fix_suggestions": {
+    "high_similarity": [
+      "與相似章節從不同角度展開劇情",
+      "改變事件順序或引入新元素",
+      "嘗試聚焦不同的角色視角"
+    ],
+    "low_conflict": [
+      "加入角色間的矛盾或對抗",
+      "引入外部威脅或危機",
+      "設置內心掙扎或抉擇"
+    ],
+    "no_growth": [
+      "讓角色習得新技能或知識",
+      "安排突破心理障礙的情節",
+      "展現角色對世界的新認識"
+    ]
+  }
+}

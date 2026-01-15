@@ -1,2 +1,7 @@
 requests>=2.31.0
 python-dotenv>=1.0.0
+
+# Phase 2 依賴 - 反模式引擎和分卷管理
+sentence-transformers>=2.2.0  # 語義相似度檢測（OutlineValidator）
+networkx>=3.0                  # 事件依賴圖（EventDependencyGraph）
+numpy>=1.24.0                  # 向量運算（sentence-transformers 依賴）

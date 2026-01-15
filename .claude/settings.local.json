@@ -14,7 +14,14 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git tag:*)",
-      "Bash(python test_stress.py:*)"
+      "Bash(python test_stress.py:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(gh:*)",
+      "Bash(python:*)",
+      "Bash(cat:*)",
+      "Bash(test:*)",
+      "Bash(tree:*)"
     ]
   }
 }

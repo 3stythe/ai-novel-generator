@@ -1,0 +1,119 @@
+{
+  "_description": "衝突曲線配置文件 - 定義劇情張力的發展模式",
+  "_usage": "由 ConflictEscalator 使用，規劃整體衝突強度曲線",
+
+  "curve_type": "wave_with_climax",
+  "total_chapters": 50,
+
+  "wave_config": {
+    "description": "波浪式上升曲線（推薦用於長篇）",
+    "wave_period": 6,
+    "base_start": 0.2,
+    "base_end": 0.7,
+    "wave_amplitude": 0.15,
+    "climax_start_percent": 0.9,
+    "climax_boost": 0.3
+  },
+
+  "chapter_type_thresholds": {
+    "opening": {
+      "range": [1, 1],
+      "max_intensity": 0.4,
+      "description": "開局章節，引入設定和懸念"
+    },
+    "setup": {
+      "range_percent": [0.0, 0.15],
+      "description": "鋪墊階段，建立世界觀和角色"
+    },
+    "development": {
+      "range_percent": [0.15, 0.7],
+      "description": "發展階段，推進劇情和角色成長"
+    },
+    "escalation": {
+      "range_percent": [0.7, 0.85],
+      "description": "升級階段，衝突激化"
+    },
+    "climax": {
+      "range_percent": [0.85, 0.95],
+      "min_intensity": 0.8,
+      "description": "高潮階段，最終對決"
+    },
+    "resolution": {
+      "range_percent": [0.95, 1.0],
+      "description": "收尾階段，解決懸念"
+    }
+  },
+
+  "conflict_levels": {
+    "low": {
+      "range": [0.0, 0.3],
+      "keywords": ["遇見", "對話", "思考", "計劃", "準備", "觀察", "發現"],
+      "description": "低強度衝突，日常交流或內心思考"
+    },
+    "medium": {
+      "range": [0.3, 0.6],
+      "keywords": ["爭執", "質疑", "懷疑", "挑戰", "對抗", "抵抗"],
+      "description": "中等強度衝突，角色間摩擦或外部壓力"
+    },
+    "high": {
+      "range": [0.6, 1.0],
+      "keywords": ["戰鬥", "決戰", "生死", "危機", "絕境", "崩潰", "背叛"],
+      "description": "高強度衝突，激烈對抗或重大危機"
+    }
+  },
+
+  "saturation_detection": {
+    "window_size": 5,
+    "threshold": 0.85,
+    "warning_message": "檢測到衝突飽和，建議安排緩和章節避免讀者疲勞"
+  },
+
+  "escalation_suggestions": {
+    "0.0-0.3": [
+      "加入小型障礙或誤會",
+      "引入新線索或謎團"
+    ],
+    "0.3-0.5": [
+      "增加角色間的摩擦或對立",
+      "引入外部壓力或時間限制",
+      "讓主角面對道德兩難"
+    ],
+    "0.5-0.7": [
+      "安排重要角色間的衝突",
+      "製造危機或失敗",
+      "揭露隱藏的威脅"
+    ],
+    "0.7-0.9": [
+      "設計高風險對抗或戰鬥",
+      "讓角色面臨重大損失",
+      "多線衝突同時爆發"
+    ],
+    "0.9-1.0": [
+      "最終決戰或終極對決",
+      "不可逆轉的重大選擇",
+      "所有衝突集中解決"
+    ]
+  },
+
+  "alternative_curves": {
+    "linear": {
+      "description": "線性上升曲線（適合中短篇）",
+      "start_intensity": 0.2,
+      "end_intensity": 1.0
+    },
+    "exponential": {
+      "description": "指數上升曲線（適合短篇高強度）",
+      "base": 2.0,
+      "min_intensity": 0.2,
+      "max_intensity": 1.0
+    }
+  },
+
+  "customization_notes": [
+    "1. curve_type 可選值: wave_with_climax, linear, exponential",
+    "2. wave_period 控制波浪週期（章節數），建議 5-8",
+    "3. climax_start_percent 控制高潮開始位置（0-1），建議 0.85-0.95",
+    "4. 可根據小說長度調整 total_chapters",
+    "5. 可自定義 escalation_suggestions 提供更精確的升級建議"
+  ]
+}

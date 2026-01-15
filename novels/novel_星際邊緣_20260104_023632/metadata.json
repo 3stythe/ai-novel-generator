@@ -1,0 +1,8 @@
+{
+  "title": "星際邊緣",
+  "genre": "科幻",
+  "theme": "人類文明存續",
+  "total_chapters": 3,
+  "created_at": "2026-01-04T02:36:32.217545",
+  "model": "Qwen/Qwen2.5-7B-Instruct"
+}

@@ -1,11 +1,11 @@
 # AI 小说生成器
 
-> 🤖 基于矽基流动 API 和 Qwen2.5 模型的智能长篇小说生成系统
+> 🤖 基于矽基流动 API 和多模型的智能长篇小说生成系统
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/Cody8722/ai-novel-generator/releases/tag/v0.1.0)
+[![Version](https://img.shields.io/badge/version-0.2.1-blue.svg)](https://github.com/Cody8722/ai-novel-generator/releases)
 [![Python](https://img.shields.io/badge/python-3.11+-green.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
-[![Test](https://img.shields.io/badge/test-passing-success.svg)](STRESS_TEST_REPORT.md)
+[![Test](https://img.shields.io/badge/test-passing-success.svg)](docs/reports/STRESS_TEST_REPORT.md)
 
 ## ✨ 特性
 
@@ -59,12 +59,21 @@ python novel_generator.py
 
 **自动化测试** (3 章):
 ```bash
-python test_generate.py
+python tests/test_generate.py
 ```
 
 **压力测试** (10 章):
 ```bash
-python test_stress.py
+python tests/test_stress.py
+```
+
+**参数优化测试**:
+```bash
+# GLM-4 参数测试（快速模式）
+python tests/test_glm4_params.py --quick --no-ai
+
+# DeepSeek R1 参数测试（快速模式）
+python tests/test_r1_params_enhanced.py --quick
 ```
 
 ## 📊 性能指标
@@ -79,7 +88,7 @@ python test_stress.py
 | **剧情连贯性** | 92/100 | ⭐⭐⭐⭐⭐ |
 | **平均字数** | 3,166 字/章 | ⭐⭐⭐⭐ |
 
-**详细测试报告**: [STRESS_TEST_REPORT.md](STRESS_TEST_REPORT.md)
+**详细测试报告**: [STRESS_TEST_REPORT.md](docs/reports/STRESS_TEST_REPORT.md)
 
 ### 规模化能力预测
 
@@ -96,14 +105,28 @@ python test_stress.py
 AI 小说生成器/
 ├── core/                      # 核心模块
 │   ├── api_client.py         # API 客户端（重试、成本追踪）
-│   └── generator.py          # 小说生成器（大纲、章节）
+│   ├── generator.py          # 小说生成器（大纲、章节）
+│   ├── character_arc_enforcer.py  # 角色弧线强制器
+│   ├── conflict_escalator.py      # 冲突升级器
+│   └── event_dependency_graph.py  # 事件依赖图
 ├── utils/                     # 工具模块
-│   └── json_parser.py        # JSON 容错解析（5 策略）
+│   ├── json_parser.py        # JSON 容错解析
+│   ├── outline_validator.py  # 大纲验证器
+│   ├── plot_manager.py       # 剧情管理器
+│   └── volume_manager.py     # 分卷管理器
 ├── templates/                 # 提示词管理
-│   └── prompts.py            # 提示词模板（防 AI 遗忘）
+│   └── prompts.py            # 提示词模板
+├── tests/                     # 测试脚本目录
+│   ├── test_glm4_params.py   # GLM-4 参数测试
+│   ├── test_r1_params_enhanced.py  # R1 参数测试
+│   └── ...                    # 其他测试脚本
+├── docs/                      # 文档目录
+│   ├── reports/              # 测试报告
+│   └── guides/               # 使用指南
+├── novels/                    # 生成的小说
+├── test_results/              # 测试结果
+├── config/                    # 配置目录
 ├── novel_generator.py        # CLI 主程序
-├── test_generate.py          # 自动化测试（3 章）
-├── test_stress.py            # 压力测试（10 章）
 └── config.py                 # 配置文件
 ```
 
@@ -136,21 +159,23 @@ AI 小说生成器/
 
 ### 生成的小说目录结构
 ```
-novel_时空裂痕_20260104_143140/
+novels/novel_时空裂痕_20260104_143140/
 ├── metadata.json              # 项目元数据
 ├── outline.txt                # 故事大纲 (916 字)
-├── chapter_001.txt            # 第 1 章 (3,704 字)
-├── chapter_002.txt            # 第 2 章 (3,514 字)
-├── ...
-├── chapter_010.txt            # 第 10 章 (2,163 字)
-└── full_novel.txt             # 完整小说 (31,658 字)
+└── chapters/                  # 章节目录
+    ├── chapter_1.txt          # 第 1 章 (3,704 字)
+    ├── chapter_2.txt          # 第 2 章 (3,514 字)
+    ├── ...
+    └── chapter_10.txt         # 第 10 章 (2,163 字)
 ```
+
+> 💡 **提示**: 所有生成的小说都保存在 `novels/` 目录中
 
 ### 统计报告示例
 ```
 📊 生成统计
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-专案目录............ novel_时空裂痕_20260104_143140
+专案目录............ novels/novel_时空裂痕_20260104_143140
 已生成章节.......... 10/10
 总字数.............. 31,658 字
 总 Token 使用........ 34,821
@@ -163,20 +188,47 @@ novel_时空裂痕_20260104_143140/
 
 ## 📖 文档
 
-- [开发者指南](README_DEV.md) - 详细的开发和使用文档
-- [实作完成报告](IMPLEMENTATION_REPORT.md) - MVP 完整实现记录
-- [压力测试报告](STRESS_TEST_REPORT.md) - 10 章长篇测试详细分析
-- [变更日志](CHANGELOG.md) - 版本历史
-- [完整技术文档](AI小說生成器完整技術文檔.md) - 原始设计文档
+### 主要文档
+- [开发者指南](docs/guides/README_DEV.md) - 详细的开发和使用文档
+- [完整技术文档](docs/guides/AI小說生成器完整技術文檔.md) - 原始设计文档
+- [变更日志](docs/guides/CHANGELOG.md) - 版本历史
+
+### 测试报告
+- [GLM-4 参数测试指南](docs/reports/GLM4_PARAMS_TEST_README.md) - GLM-4 模型参数优化
+- [GLM-4 诊断增强报告](docs/reports/GLM4_DEBUG_ENHANCEMENT_REPORT.md) - Debug 模式实现
+- [R1 参数测试指南](docs/guides/R1_PARAMS_TESTER_GUIDE.md) - DeepSeek R1 参数优化
+- [压力测试报告](docs/reports/STRESS_TEST_REPORT.md) - 10 章长篇测试分析
+- [实作完成报告](docs/reports/IMPLEMENTATION_REPORT.md) - MVP 完整实现记录
+
+### 重构文档
+- [大纲生成器重构](docs/guides/REFACTOR_OUTLINE_GENERATOR.md) - 延遲載入優化
+- [延遲載入優化](docs/guides/REFACTOR_LAZY_LOADING.md) - 性能優化報告
+
+### 查看更多
+- [所有文档](docs/) - 完整文档列表
+- [所有测试脚本](tests/) - 测试脚本说明
+- [生成的小说](novels/) - 小说存储说明
 
 ## 🚀 支持的模型
 
+### 当前版本 (v0.2.1)
+
+系统支持三模型协作：
+- **Architect (GLM-4)** ✅ - 大纲架构设计
+- **Writer (Qwen2.5-7B)** ✅ - 章节内容生成
+- **Editor (GLM-4)** ✅ - 内容编辑优化
+
+### 可用模型列表
+
 | 模型 | 输入价格 | 输出价格 | 适用场景 |
 |------|---------|---------|---------|
-| Qwen2.5-7B-Instruct ✅ | ¥0.0007/1K | ¥0.0007/1K | 测试开发、日常创作 |
+| **GLM-4** ✅ | ¥0.0010/1K | ¥0.0010/1K | 架构设计、编辑优化 |
+| **Qwen2.5-7B-Instruct** ✅ | ¥0.0007/1K | ¥0.0007/1K | 内容生成 |
+| **DeepSeek R1** | ¥0.0014/1K | ¥0.0056/1K | 深度推理（已测试但未采用）|
 | Qwen2.5-14B-Instruct | ¥0.0014/1K | ¥0.0014/1K | 正式出版 |
 | Qwen2.5-32B-Instruct | ¥0.0035/1K | ¥0.0035/1K | 专业级创作 |
-| Qwen2.5-72B-Instruct | ¥0.0070/1K | ¥0.0070/1K | 旗舰级品质 |
+
+> 💡 **提示**: 使用参数测试工具可以为每个模型找到最佳参数配置
 
 ## 🧪 测试验证
 
@@ -256,4 +308,14 @@ novel_时空裂痕_20260104_143140/
 
 **🎉 开始你的 AI 小说创作之旅！**
 
-*最后更新: 2026-01-04 | 版本: v0.1.0 MVP*
+*最后更新: 2026-01-15 | 版本: v0.2.1*
+
+### 📂 项目组织
+```
+📁 tests/       - 所有测试脚本
+📁 docs/        - 技术文档和报告
+📁 novels/      - 生成的小说
+📁 core/        - 核心功能模块
+📁 utils/       - 工具函数
+📁 templates/   - 提示词模板
+```

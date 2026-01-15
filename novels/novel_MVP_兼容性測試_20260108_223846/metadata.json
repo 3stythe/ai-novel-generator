@@ -1,0 +1,8 @@
+{
+  "title": "MVP 兼容性測試",
+  "genre": "測試",
+  "theme": "驗證向後兼容",
+  "total_chapters": 3,
+  "created_at": "2026-01-08T22:38:46.823495",
+  "model": "Qwen/Qwen2.5-7B-Instruct"
+}

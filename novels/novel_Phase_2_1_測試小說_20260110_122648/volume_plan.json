@@ -1,0 +1,18 @@
+{
+  "title": "Phase 2.1 測試小說",
+  "genre": "科幻",
+  "theme": "AI 協作",
+  "total_chapters": 10,
+  "total_volumes": 1,
+  "chapters_per_volume": 10,
+  "volumes": [
+    {
+      "volume_num": 1,
+      "title": "Phase 2.1 測試小說",
+      "theme": "AI 協作 - 高潮與結局",
+      "start_chapter": 1,
+      "end_chapter": 10,
+      "chapter_count": 10
+    }
+  ]
+}

@@ -7,38 +7,39 @@ AI 小說生成器 - JSON 解析器
 import json
 import re
 
-
 class RobustJSONParser:
     """
     強健的 JSON 解析器
-    支援多種容錯策略，確保能解析 AI 生成的不規範 JSON
+    支援多種容錯策略，並能處理 DeepSeek R1 的思考標籤
     """
 
     def __init__(self):
-        """初始化解析器"""
         pass
 
+    def clean_think_tag(self, text):
+        """
+        🔥 新增功能：清洗 DeepSeek-R1 的思考標籤 <think>...</think>
+        """
+        if not text:
+            return ""
+        # 移除 <think> 到 </think> 中間的所有內容
+        cleaned_text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
+        return cleaned_text.strip()
+
     def parse(self, response_text):
-        """
-        嘗試所有可能的解析方式
+        """嘗試所有可能的解析方式"""
 
-        Args:
-            response_text: AI 回應文本
+        # 1. 優先清洗思考過程
+        clean_text = self.clean_think_tag(response_text)
 
-        Returns:
-            解析後的字典或列表
-
-        Raises:
-            ValueError: 所有策略都失敗時
-        """
         # 策略 1：直接解析
         try:
-            return json.loads(response_text)
+            return json.loads(clean_text)
         except:
             pass
 
-        # 策略 2：提取 ```json``` 包裹的內容
-        match = re.search(r'```json\s*\n(.*?)\n```', response_text, re.DOTALL)
+        # 策略 2：提取 ```json 包裹的內容
+        match = re.search(r'```json\s*\n(.*?)\n```', clean_text, re.DOTALL)
         if match:
             try:
                 return json.loads(match.group(1))
@@ -46,33 +47,22 @@ class RobustJSONParser:
                 pass
 
         # 策略 3：提取任何 ``` 包裹的內容
-        match = re.search(r'```\s*\n(.*?)\n```', response_text, re.DOTALL)
+        match = re.search(r'```\s*\n(.*?)\n```', clean_text, re.DOTALL)
         if match:
             try:
                 return json.loads(match.group(1))
             except:
                 pass
 
-        # 策略 4：找第一個 { 和最後一個 }
+        # 策略 4: 暴力搜尋頭尾
         try:
-            first = response_text.index('{')
-            last = response_text.rindex('}')
-            json_str = response_text[first:last+1]
-            return json.loads(json_str)
+            first = clean_text.index('{')
+            last = clean_text.rindex('}')
+            return json.loads(clean_text[first:last+1])
         except:
             pass
 
-        # 策略 5：找第一個 [ 和最後一個 ]
-        try:
-            first = response_text.index('[')
-            last = response_text.rindex(']')
-            json_str = response_text[first:last+1]
-            return json.loads(json_str)
-        except:
-            pass
-
-        # 全部失敗
-        raise ValueError(f"無法解析 JSON，嘗試了所有策略\n內容預覽:\n{response_text[:200]}...")
+        raise ValueError(f"無法解析 JSON: {clean_text[:50]}...")
 
     def parse_with_key_mapping(self, response_text, key_map):
         """
@@ -188,3 +178,14 @@ if __name__ == '__main__':
     # 測試 3：中文 key
     test3 = '{"標題": "測試小說", "內容": "這是內容"}'
     print("測試 3:", parser.parse_with_key_mapping(test3, COMMON_KEY_MAPPINGS))
+
+    # 測試 4：DeepSeek R1 思考標籤
+    test4 = '''
+    <think>
+    讓我思考一下如何構建這個 JSON...
+    首先需要標題，然後是內容...
+    </think>
+
+    {"title": "測試小說", "content": "這是正文內容"}
+    '''
+    print("測試 4:", parser.parse(test4))

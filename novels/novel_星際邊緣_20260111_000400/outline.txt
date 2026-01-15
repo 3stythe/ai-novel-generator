@@ -1,0 +1,70 @@
+好，我现在需要帮用户规划一个小说的大纲。用户的要求挺详细的，我得仔细看看。首先，小说的名字是《星際邊緣》，类型是科幻，主题是关于人类文明的延续与重建。总共有10章，而且每个章节都要有独特的剧情推进，不能重复。
+用户特别强调要用繁体中文，所以我要确保整个大纲都是中文的，没有英文出现。同时，不能有任何混合中英文的情况，这点很重要。专有名词如果必须用英文的话，需要用括号标注，比如“赛博庞克 (Cyberpunk)”。
+接下来，章节规划方面有几个原则：每章要有不同的内容，避免重复；使用具体的动词和事件名称而不是抽象的目标；每章必须包含具体事件，不能只是目标或计划；后半部分不能重复前半部分；至少有三章是有冲突和转折的。
+好的，现在开始构思。故事概要是关于人类在宇宙边缘的殖民地面临危机，主角林晨和艾克斯带领团队寻找解决方案。核心冲突是发现古老的遗迹并对抗敌对势力，最终重建文明。
+主要角色方面，除了主角林晨和艾克斯，还需要几个配角，比如科学家、 resistance成员、技术专家和殖民地官员。他们各自有不同的性格特点，能够互补合作。
+然后是章节规划，从第1章到第10章，每章都有具体事件。第1章是在废墟中发现遗迹，第2章对抗第一波敌人，第3章解决核心问题，第4章面对新的威胁，第5章重建基地，第6章发现更大的阴谋，第7章与抵抗势力合作，第8章制定长期计划，第9章处理内部问题，第10章完成重建。
+这样安排下来，每个章节都有独特的内容，符合用户的所有要求。
+```json
+[
+    {
+        "chapter": 1,
+        "content": "在废墟中 discovery mysterious equipment that hints at an ancient civilization's technology, leading to a potential solution for rebuilding humanity's future."
+    },
+    {
+        "chapter": 2,
+        "content": "face first wave of enemy AI forces attempting to disrupt the colony's operations, resulting in temporary shutdown of key defense systems."
+    },
+    {
+        "chapter": 3,
+        "content": "solve core issue by activating the discovered technology, but inadvertently causing a destabilization in the local ecosystem, endangering the fragile colony."
+    },
+    {
+        "chapter": 4,
+        "content": "discover evidence implicating a larger conspiracy involving rival colonists who are manipulating events to seize control of the colony."
+    },
+    {
+        "chapter": 5,
+        "content": "rebuild the colony from the ground up, learning valuable lessons about resource management and community cohesion while preparing for the next challenge."
+    },
+    {
+        "chapter": 6,
+        "content": "uncover a hidden network of informants within the resistance who have been working silently to support the colonists' cause, providing crucial intelligence."
+    },
+    {
+        "chapter": 7,
+        "content": "collaborate with the resistance to uncover deeper truths about the ancient civilization and its connection to the current conflict, fostering mutual trust between allies."
+    },
+    {
+        "chapter": 8,
+        "content": "formulate long-term strategy to not only address immediate threats but also ensure the sustainability and resilience of the colony for generations to come."
+    },
+    {
+        "chapter": 9,
+        "content": "discover internal conflicts within the resistance, revealing betrayal and mistrust among trusted allies, forcing a difficult decision on how to proceed."
+    },
+    {
+        "chapter": 10,
+        "content": "complete the final stages of rebuilding the colony, incorporating advanced technologies and sustainable practices, ensuring a secure and thriving future for humanity."
+    }
+]
+```
+### 故事概要：
+《星際邊緣》讲述了一群在宇宙边疆殖民地的幸存者，在面对未知威胁时，通过发现古代文明的遗迹而踏上重建人类文明之旅的故事。主角林晨和艾克斯带领团队对抗敌對勢力，同時must solve核心技術問題來重建家园。故事的核心衝突包括发现了古代遗跡中的 warning information, 以及 face 敵對AI勢力的突襲。最終，團隊成功重建了殖民地，并為人类的存續與重建奠定了基礎。
+### 主要角色：
+1. 林晨 (Lin晨) - 對抗勢力的 leader, 具备科技创新和冒險精神  
+2. 艾克斯 (艾克斯) - 技術專家, 精通程式設計和密碼學  
+3. Dr. Jamie - 学术研究者, 審查古代遗迹的專家  
+4. 機器人 (Machine) - 段階AI, 協助against 敵對勢力  
+5. 柏琦 (Bella琦) - resistance 成员, 守護殖民地安全
+### 章節規劃：
+1. 第1章: 在废墟中 discovery mysterious equipment that hints at an ancient civilization's technology, leading to a potential solution for rebuilding humanity's future.
+2. 第2章: face first wave of enemy AI forces attempting to disrupt the colony's operations, resulting in temporary shutdown of key defense systems.
+3. 第3章: solve core issue by activating the discovered technology, but inadvertently causing a destabilization in the local ecosystem, endangering the fragile colony.
+4. 第4章: discover evidence implicating a larger conspiracy involving rival colonists who are manipulating events to seize control of the colony.
+5. 第5章: rebuild the colony from the ground up, learning valuable lessons about resource management and community cohesion while preparing for the next challenge.
+6. 第6章: uncover a hidden network of informants within the resistance who have been working silently to support the colonists' cause, providing crucial intelligence.
+7. 第7章: collaborate with the resistance to uncover deeper truths about the ancient civilization and its connection to the current conflict, fostering mutual trust between allies.
+8. 第8章: formulate long-term strategy to not only address immediate threats but also ensure the sustainability and resilience of the colony for generations to come.
+9. 第9章: discover internal conflicts within the resistance, revealing betrayal and mistrust among trusted allies, forcing a difficult decision on how to proceed.
+10. 第10章: complete the final stages of rebuilding the colony, incorporating advanced technologies and sustainable practices, ensuring a secure and thriving future for humanity.

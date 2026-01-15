@@ -1,0 +1,46 @@
+{
+    "title": "星際邊緣測試",
+    "summary": "一名 young 科學家在 探索 一個 ancient 數學 理論時，意外 發現 一套 可 以 控制 time 的 技術。然而，當 he 剛才 wake up from a long sleep, he finds himself in an 危險 的 situation where he must use this 技術 to escape a collapsing city and stop a global catastrophe.",
+    "characters": [
+        {
+            "name": "林晨",
+            "desc": "一名 young 科學家，拥有 deep 知識 in mathematics 和 physics，並對 time 的 control 有浓厚興趣."
+        },
+        {
+            "name": "Alex",
+            "desc": "一名 信賴 的 friend，工程學家，精通 artificial intelligence."
+        },
+        {
+            "name": "小 group",
+            "desc": "其他 成員，包括 biologists, physicists 和 tech experts，共同致力于解决问题."
+        }
+    ],
+    "chapters": [
+        {
+            "chapter_id": 1,
+            "title": "第一章：神秘現象的 discovery",
+            "outline": "清晨，林晨在废墟基地的 library 中 discovery 了一系列神秘的公式和装置。這些公式似乎指向某種 time manipulation 的 method。然而，当他试图深入研究時，基地的防禦系統自动啟動，发出刺耳的警报聲。"
+        },
+        {
+            "chapter_id": 2,
+            "title": "深夜的突襲",
+            "outline": "第二天凌晨，基於 Alex 的建議，團隊 members 分 headquarter 到 city's periphery。在 one hour 的time limit內，他们must 使用 time control 技術來 escape a rapidly deteriorating city. 在這段時間內，團隊 members must work together to decode the technology and escape before it is too late."
+        },
+        {
+            "chapter_id": 3,
+            "title": "外部勢力的 entrance",
+            "outline": "第三天，一队 unknown organization 的代表 arrive at the border of the city. They demand immediate action, claiming that they are here to save humanity. Lin Chen and his team must now decide whether to collaborate or fight against them, as both sides have advanced technologies and resources."
+        },
+        {
+            "chapter_id": 4,
+            "title": "全球危機的 來襲",
+            "outline": "第四天， situation deteriorates when a massive earthquake hits the city. The time control technology discovered by Lin Chen proves to be insufficient to handle such a scale event. Team members must find a new way to protect themselves, possibly using auxiliary devices or natural phenomena."
+        },
+        {
+            "chapter_id": 5,
+            "title": "高潮與 伏笔",
+            "outline": "在final day, 林晨和他的團隊终于 discovers a hidden network controlling time worldwide. They must now not only stop the current catastrophe but also face the consequences of their discovery, which may have far-reaching implications on human civilisation."
+        }
+    ]
+}
+```

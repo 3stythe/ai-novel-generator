@@ -35,8 +35,11 @@ env/
 # Environment Variables
 .env
 
-# Generated Novels (excluding test output)
-novel_*/
+# Generated Novels (可選：如果不想提交生成的小說到 Git)
+# novels/novel_*/
+
+# Test Results
+test_results/
 
 # Logs
 *.log

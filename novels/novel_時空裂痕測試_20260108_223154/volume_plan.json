@@ -1,0 +1,18 @@
+{
+  "title": "時空裂痕測試",
+  "genre": "科幻",
+  "theme": "時間旅行者發現修復裂痕的代價",
+  "total_chapters": 15,
+  "total_volumes": 1,
+  "chapters_per_volume": 15,
+  "volumes": [
+    {
+      "volume_num": 1,
+      "title": "時空裂痕測試",
+      "theme": "時間旅行者發現修復裂痕的代價 - 高潮與結局",
+      "start_chapter": 1,
+      "end_chapter": 15,
+      "chapter_count": 15
+    }
+  ]
+}
